@@ -1,0 +1,308 @@
+
+
+.home-body {
+background-color: #F1F1F1;
+margin: auto;
+
+}
+
+.login-body{
+
+  background: #333;
+  margin:0;
+  padding: 0;
+  font-family: "Montsrerrat",sans-serif;
+}
+
+.bg-container {
+
+    position: relative;
+  }
+
+
+.bg-img{
+
+  width: 100%;
+  height:100%;
+
+  }
+
+
+
+
+
+/*LOGIN PAGE CSS*/
+.container{
+
+width: 360px;
+height: 600px;
+background: url("../img/login-bg.png");
+background-repeat: no-repeat;
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+color: white;
+text-align: center;
+border-radius: 14px;
+border-style: solid;
+border-color: white;
+opacity: 1;
+
+}
+
+.container h1 {
+
+  font-size: 40px;
+  margin-top: 12px;
+  margin-bottom: 60px;
+  color: black;
+}
+
+.tbox {
+  width: 260px;
+  height:40px;
+  background: #F1F1F1B3;
+  border-radius: 10px;
+  border-style: solid;
+  margin:10px auto;
+  transition: .25s;
+
+}
+
+.tbox input {
+
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 90%;
+  line-height:37px;
+  font-family: "Montsrerrat",sans-serif;
+  font-size: 14px;
+  color:#333;
+}
+
+.tbox:hover{
+
+  border-color: #42d4f5;
+}
+
+.btn {
+  width: 260px;
+  height:40px;
+  background: #42d4f5;
+  border-radius: 10px;
+  margin:14px auto;
+  display: block;
+  font-family: "Montsrerrat",sans-serif;
+  font-size: 16px;
+  border:none;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s all;
+
+}
+.btn:hover{
+  background: #525354;
+
+}
+
+.b1 {
+  display: block;
+  width:260px;
+  padding:10px, 0;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  margin: auto;
+  transition: 0.4s all;
+}
+
+.b1:hover {
+  background: #525354;
+  padding: 15px;
+  border-radius: 10px;
+/*ended here */
+}
+
+.b2 {
+  position: absolute;
+  bottom: 80px;
+  left:50%;
+  transform:translateX(-50%);
+  width:260px;
+  padding:10px, 0;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.4s all;
+  color: #42d4f5;
+
+}
+
+.b2:hover {
+  background: #525354;
+  padding: 15px;
+  border-radius: 10px;
+
+/*ended here */
+}
+
+
+/* css for modal */
+
+.modal{
+  background-color: white;
+  position: absolute;
+  top: 33%;
+  left: 39%;
+  text-align: center;
+  padding: 2% 4%;
+  display: none; /*Sets modal default to hidden*/
+  z-index: 2000;
+}
+
+.nav-main {
+  position: fixed;
+  top:0;
+  width:100%;
+  height: 60px;
+  background-color: #FFF;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+
+}
+
+
+.btn-toggle-nav {
+  width:60px;
+  height:100%;
+  background-color: #F98F39;
+  background-image:url("../img/menu.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  cursor: pointer;
+  transition-duration: .25s;
+
+
+}
+
+.btn-toggle-nav:hover {
+background-color: #42d4f5;
+background-size: 50%;
+
+
+
+
+}
+
+
+.nav-main ul {
+
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+
+}
+
+.nav-main ul li{
+  list-style: none;
+  line-height: 60px;
+
+
+}
+
+.nav-main ul li a{
+  display: block;
+  height:100%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:#111;
+  font-family:inherit;
+  font-size: 16px;
+
+}
+
+.nav-sidebar{
+
+  position: fixed;
+  left:0;
+  bottom: 0;
+  width: 50px;
+  padding: 0 5px;
+  height: calc(100vh - 60px);
+  background-color: #1b1b1b;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-sidebar ul {
+padding-top: 15px;
+overflow: hidden;
+visibility: hidden;
+}
+
+.nav-sidebar ul li{
+line-height: 60px;
+list-style: none;
+}
+
+.nav-sidebar ul li span, .nav-sidebar ul li a{
+display: block;
+height: 60px;
+padding: 0 10px;
+text-decoration: none;
+text-transform: uppercase;
+color: #FFF;
+font-size:16px;
+font-family: inherit;
+white-space: nowrap;
+/*opacity: 0;*/
+transition: all 0.5s ease-in-out;
+}
+
+.nav-sidebar ul li a:hover{
+background-color: #525354
+
+}
+
+.con{
+position: fixed;
+margin: 10% 0% 0% 10%;
+
+
+}
+
+
+select {
+
+  width: 12.25%;
+  height: 50px;
+  padding: 12px 0px;
+  border: solid;
+  border-width: 2px;
+  border-color: #00000f;
+  border-radius: 12px;
+  background: #ffff;
+  text-align-last:center;
+  margin-right: 2%;
+  margin-left: 2%;
+  font-size: 12px;
+}
+
+select:hover{
+  transition: .3s;
+  border-color:#42d4f5;
+  color:#42d4f5;
+}
+
+#form-content span{
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+
+
