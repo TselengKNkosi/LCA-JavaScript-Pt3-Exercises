@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Simple Registration Form</title>
+    <link rel="stylesheet" href="week8_ex04_form_style.css">
+  </head>
+  <body>
+    <div class="formWrapper">
+      <div class="formContainer">
+        <h1>Register Your Account</h1>
+
+        <!--Success/Error Message Display-->
+        <div id="formMessage"></div>
+
+        <!--Registration Form-->
+        <form id="registrationForm">
+          <div class="formGroup">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username">
+            <div id="usernameError" class="errorMessage"></div>
+          </div>
+
+          <div class="formGroup">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            <div id="emailError" class="errorMessage"></div>
+          </div>
+
+          <div class="formGroup">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+            <div id="passwordError" class="errorMessage"></div>
+          </div>
+
+          <div class="formGroup">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" name="confirmPassword" id="confirmPassword">
+            <div id="confirmPasswordError" class="errorMessage"></div>
+          </div>
+
+          <div class="buttonContainer">
+            <button type="submit" id="submitBtn">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="week8_ex04_dom_registration_form.js"></script>
+  </body>
+</html>
