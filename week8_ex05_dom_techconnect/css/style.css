@@ -1,0 +1,639 @@
+/* --- Colour Palette + Shadows --- */
+:root {
+  /*Colour Palette*/
+  --primaryMaroon: #4e0911;
+  --maroonDark: #260707;
+  --maroonLight: #905f66;
+  --accentBeige: #f1e2d1;
+  --beigeDark: #dcc3aa;
+  --beigeLight: #faf1ec;
+  --bg: #f2f0ef;
+  --textDark: #050308;
+  --textLight: #fdfffc;
+  --success: #6f9460;
+  
+  /*Shadows*/
+  --smShadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --mdShadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --lgShadow: 0 10px 14px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- General Typography --- */
+
+/*Body Text*/
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--textDark);
+  background-color: var(--bg);
+  font-weight: 400;
+}
+
+/*Headings*/
+h1, h2, h3 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 700;
+  color: var(--maroonDark);
+  letter-spacing: 0.5px;
+}
+
+.display-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.9px;
+  margin-bottom: 1.5rem;
+}
+
+.lead-text {
+  font-size: 1.13rem;
+  color: var(--primaryMaroon);
+  font-weight: 500;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* --- Navigation/Header --- */
+.navbar {
+  background-color: var(--beigeLight);
+  padding: 1rem;
+  box-shadow: var(--smShadow);
+}
+
+.brandText {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  color: var(--maroonDark);
+}
+
+.navSubtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--primaryMaroon);
+}
+
+/* --- Hero --- */
+.heroSect {
+  padding: 3rem 0;
+  border-bottom: 2px solid (var(--primaryMaroon));
+}
+
+.statsCard {
+  background: linear-gradient(135deg, var(--primaryMaroon), var(--maroonLight));
+  padding: 2rem 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: var(--mdShadow);
+  display: inline-block;
+  width: 100%;
+}
+
+.statNumber {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accentBeige);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: var(--beigeLight);
+  font-weight: 600;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* --- Controls: Search, Toggle, Add --- */
+
+.controlsSect {
+  background-color: var(--textLight);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--smShadow);
+}
+
+/* Search */
+.searchWrapper {
+  position: relative;
+}
+
+.formLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--textDark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+#searchInput {
+  border: 2px solid var(--maroonDark);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--beigeLight);
+}
+
+#searchInput:focus {
+  border-color: var(--accentBeige);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+  background-color: var(--bg);
+}
+
+#searchInput::placeholder {
+  color: var(--maroonDark);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 1.5rem;
+  top: 53%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Buttons - Toggle + Add */
+.btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Toggle Button */
+.btn-toggle {
+  background-color: var(--bg);
+  color: var(--primaryMaroon);
+  border: 2px solid var(--primaryMaroon);
+  font-weight: 600;
+}
+
+.btn-toggle:hover {
+  background-color: var(--beigeLight);
+  color: var(--maroonDark);
+  border-color: var(--accentBeige);
+  box-shadow: var(--mdShadow);
+  transform: translateY(-2px);
+}
+
+.btn-toggle:active {
+  background-color: var(--accentBeige);
+  color: var(--maroonDark);
+  border-color: var(--beigeDark);
+}
+
+.toggleIcon {
+  font-size: 1rem;
+}
+
+.btnIcon {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Add Developer Button */
+.btn-primary {
+  background-color: var(--primaryMaroon);
+  color: var(--textLight);
+  border-color: var(--primaryMaroon);
+}
+
+.btn-primary:hover {
+  background-color: var(--maroonDark);
+  border-color: var(--maroonDark);
+  box-shadow: var(--mdShadow);
+  transform: translateY(-2px);
+}
+
+/* --- View Stylings: Card + Table --- */
+
+/* Developer Card View */
+.card {
+  border: 2px solid var(--maroonDark);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: var(--bg);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--smShadow);
+}
+
+.card:hover {
+  border-color: var(--primaryMaroon);
+  box-shadow: (--lgShadow);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--primaryMaroon), var(--maroonLight));
+  padding: 1.5rem;
+  border: none;
+  color: var(--textLight);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.cardAvatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid var(--accentBeige);
+  object-fit: cover;
+  flex-shrink: 0; 
+}
+
+.card-headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardName {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--textLight);
+}
+
+.cardRole {
+  font-size: 0.88rem;
+  color: var(--accentBeige);
+  margin: 0;
+  font-weight: 500;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+}
+
+.cardDetail-label {
+  font-size: 0.8rem;
+  font-weight: 750;
+  color: var(--maroonDark);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.cardDetail-value {
+  font-size: 0.95rem;
+  color: var(--textDark);
+  font-weight: 500;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTag {
+  background-color: var(--bg);
+  color: var(--primaryMaroon);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--maroonDark);
+}
+
+.availableBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--success);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--success);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.card-footer {
+  padding: 1.5rem;
+  background-color: var(--bg);
+  border-top: 1px solid var(--primaryMaroon);
+  display: flex;
+  gap: 1rem;
+}
+
+.cardAction-btn {
+  flex: 1;
+  padding: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 2px solid var(--maroonDark);
+  background-color: var(--bg);
+  color: var(--textDark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cardAction-btn:hover {
+  border-color: var(--accentBeige);
+  background-color: var(--beigeLight);
+  color: var(--maroonDark);
+}
+
+/* Developer Table View */
+.table-responsive {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--smShadow);
+}
+
+.developer-table {
+  margin: 0;
+  background-color: var(--bg);
+}
+
+.developer-table thead {
+  background: linear-gradient(90deg, var(--primaryMaroon), var(--maroonLight));
+  color: var(--textLight);
+}
+ 
+.developer-table thead th {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 700;
+  padding: 1.5rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+ 
+.developer-table tbody tr {
+  border-bottom: 1px solid var(--maroonDark);
+  transition: background-color 0.3s ease;
+}
+ 
+.developer-table tbody tr:hover {
+  background-color: rgba(61, 0, 8, 0.05);
+}
+
+.developer-table tbody td {
+  padding: 1.5rem;
+  vertical-align: middle;
+  color: var(--textDark);
+  font-weight: 500;
+}
+
+.developer-table .tableName {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 700;
+  color: var(--maroonDark);
+}
+ 
+.developer-table .tableRole {
+  color: var(--beigeDark);
+  font-weight: 600;
+}
+ 
+.developer-table .tableSkills {
+  font-size: 0.9rem;
+  color: var(--primaryMaroon);
+}
+ 
+.developer-table .tableLocation {
+  color: var(--maroonDark);
+}
+
+/* --- Modal --- */
+.modalContent {
+  border: 2px solid var(--maroonDark);
+  border-radius: 0.75rem;
+}
+
+.modal-header {
+  background-color: var(--bg);
+  padding: 2rem;
+}
+
+.modalTitle {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 700;
+  color: var(--maroonDark);
+  letter-spacing: 2px;
+}
+
+.modalBody {
+  padding: 2rem;
+}
+
+.modal-footer {
+  padding: 2rem;
+  background-color: var(--bg);
+}
+
+/* Modal Form Controls */
+.form-control, .formSelect {
+  border: 2px solid var(--maroonDark);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .formSelect:focus {
+  border-color: var(--accentBeige);
+  box-shadow: 0 0 0 3px rgba(61, 0, 8, 0.1);
+}
+
+.form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--maroonDark);
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
+ 
+.form-check-input:checked {
+  background-color: var(--accentBeige);
+  border-color: var(--beigeDark);
+}
+ 
+.form-check-label {
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.invalidFeedback {
+  display: none;
+  color: #a10b1a;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.isInvalid ~ .invalidFeedback {
+  display: block;
+}
+
+/* --- Empty/No Match State --- */
+.empty-state {
+  background-color: var(--bg);
+  border-radius: 0.75rem;
+  padding: 3rem 1.5rem;
+  border: 2px dashed var(--maroonDark);
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.emptyTitle {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--maroonDark);
+  margin-bottom: 1rem;
+}
+
+.emptyText {
+  color: var(--textDark);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* --- Responsive Design --- */
+/* Tablets */
+@media (max-width: 768px) {
+  .display-heading {
+    font-size: 2rem;
+  }
+
+  .heroSect {
+    padding: 2rem 0;
+  }
+
+  .statsCard {
+    margin-top: 1.5rem;
+  }
+
+  .controlsSect {
+    padding: 1.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cardAvatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .developer-table {
+    font-size: 0.85rem;
+  }
+
+  .developer-table thead th,
+  .developer-table tbody td {
+    padding: 1rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .display-heading {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .lead-text {
+    font-size: 1rem;
+  }
+
+  .statNumber {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-header {
+    gap: 1rem;
+  }
+
+  .cardAvatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cardName {
+    font-size: 1rem;
+  }
+
+  .cardRole {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .brandText {
+    font-size: 1.25rem;
+  }
+
+  .modal-header, .modalBody, .modal-footer {
+    padding: 1.5rem;
+  }
+}
